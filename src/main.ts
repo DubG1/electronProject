@@ -1,12 +1,9 @@
 import { createApp } from 'vue'
-import "./style.css"
+import './style.css'
 import App from './App.vue'
+import 'vuetify/dist/vuetify.css'
 import './samples/node-api'
-
-import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
-import * as components from 'vuetify/components'
-import * as directives from 'vuetify/directives'
 
 const themeConfigs = {
     dark: false,
@@ -15,10 +12,7 @@ const themeConfigs = {
     }
 }
 
-
 const vuetify = createVuetify({
-    components,
-    directives,
     theme: {
         defaultTheme: 'themeConfigs',
         themes: {
@@ -28,8 +22,8 @@ const vuetify = createVuetify({
 })
 
 createApp(App)
-.use(vuetify)
-  .mount('#app')
-  .$nextTick(() => {
-    postMessage({ payload: 'removeLoading' }, '*')
-  })
+    .use(vuetify)
+    .mount('#app')
+    .$nextTick(() => {
+        postMessage({ payload: 'removeLoading' }, '*')
+    })
