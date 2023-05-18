@@ -4,6 +4,8 @@ import App from './App.vue'
 import 'vuetify/dist/vuetify.css'
 import './samples/node-api'
 import { createVuetify } from 'vuetify'
+import { createRouter, createWebHistory } from 'vue-router'
+import { router } from './router/index'
 
 const themeConfigs = {
     dark: false,
@@ -22,6 +24,7 @@ const vuetify = createVuetify({
 })
 
 createApp(App)
+    .use(router)
     .use(vuetify)
     .mount('#app')
     .$nextTick(() => {
