@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "vite-tsconfig-paths": "^4.2.0",
+    "vue-router": "^4.2.0",
     "vuetify": "^3.2.4"
   }
 }
